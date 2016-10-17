@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > Hans' Weather WebApp
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > Anybody who needs up to date and easy to understand information about the weather will love this website.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > This website allows you to easily take a look at the weather in many different cities and plan out your week with the weather in mind. 
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Helps a consumer access the weather easily.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > My product isn't an overengineered solution to an easy to answer question: what do I need to know about the weather.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > "I learned so much writing this weather app, it's almost more useful for me than for my users!"
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > No need to sign-in, although you can if you wish, my app is usable by anybody who loves the weather.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > "Hans' Weather WebApp is the perfect site for me to quickly glance at in the morning to quickly get an idea of what the weather will be like."
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
