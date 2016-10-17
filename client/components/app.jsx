@@ -2,34 +2,22 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      test: true
+      location: false
     };
   }
 
   render() {
-    if (this.state.test) {
+    if (!this.state.location) {
       return (<div>
-                <p>Hello World!</p>
+                <Search state={this.state} />
               </div>);
     }
     return (
       <div>
-        <Nav state={this.state} />
-        <div className="col-md-7">
-          <VideoPlayer state={this.state} video={this.state.currentVideo}/>
-        </div>
-        <div className="col-md-5">
-          <VideoList state={this.state} videos={this.state.Videos}/>
-        </div>
+        
       </div>
     );
   }
-
-
 }
 
-
-
-// In the ES6 spec, files are "modules" and do not share a top-level scope
-// `var` declarations will only exist globally where explicitly defined
 window.App = App;
