@@ -2,7 +2,7 @@ var Search = (prop) => (
   <div>
     <input type="text" className="latBox" name="latBox" placeholder="Latitude..."/>
     <input type="text" className="longBox" name="longBox" placeholder="Longitude..."/>
-    <button onClick={function() { prop.state.updateLocation() }}>Search!</button>
+    <button type="submit" onClick={function() { prop.state.updateLocation() }}>Search!</button>
   </div>
 );
 

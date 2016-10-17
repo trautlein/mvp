@@ -1,0 +1,12 @@
+body {
+  background-color: #DFE2DB;
+}
+.alert {
+  color: red;
+}
+
+.alert i {
+  float: left;
+  font-size: 8em;
+  padding-right: 10px;
+}

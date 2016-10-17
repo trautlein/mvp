@@ -5,7 +5,8 @@ class App extends React.Component {
       location: false,
       lat: null,
       long: null,
-      updateLocation: this.updateLocation.bind(this)
+      updateLocation: this.updateLocation.bind(this),
+      weather: null
     };
   }
 
@@ -13,11 +14,20 @@ class App extends React.Component {
     if (!this.state.location) {
       return (<div>
                 <Search state={this.state} />
-              </div>);
+                <h1>Your weather will appear here!</h1>
+              </div>
+      );
     }
     return (
       <div>
-
+        <div>
+          <h3>Thanks for searching! Want to search again?</h3>
+          <Search state={this.state} />
+        </div>
+        <div>
+          <h2>Your current weather is below!</h2>
+          <Weather state={this.state} />
+        </div>
       </div>
     );
   }
@@ -26,22 +36,20 @@ class App extends React.Component {
     var lat1 = $('.latBox').val();
     var long1 = $('.longBox').val();
 
-    console.log(lat1, long1, this.state.location);
-
     this.setState({
       location: true,
       lat: lat1,
-      long: long1
+      long: long1,
+      weather: exampleWeatherData
     }, function afterUpdateLocationState () {
-      console.log(this.state.location);
+      // console.log('Lat:', this.state.lat, 'Long:', this.state.long);
     })
-
-    console.log(this.state.location);
 
     $('.latBox').val('');
     $('.longBox').val('');
 
-    // console.log('Lat:', this.state.lat, 'Long:', this.state.long);
+
+
   }
 
 }
