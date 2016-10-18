@@ -34,8 +34,8 @@ class App extends React.Component {
   }
 
   updateLocation() {
-    var lat1 = $('.latBox').val();
-    var long1 = $('.longBox').val();
+    let lat1 = $('.latBox').val();
+    let long1 = $('.longBox').val();
 
     this.setState({
       location: true,
@@ -43,14 +43,9 @@ class App extends React.Component {
       long: long1,
       weather: exampleWeatherData
     }, function afterUpdateLocationState () {
-      // console.log('Lat:', this.state.lat, 'Long:', this.state.long);
-    })
-
-    $('.latBox').val('');
-    $('.longBox').val('');
-
-
-
+      $('.latBox').val('');
+      $('.longBox').val('');
+    });
   }
 
 }

@@ -1,4 +1,4 @@
-var Weather = ({weather}) => (
+let Weather = ({weather}) => (
   <div>
     {/*Checks to see if alerts exists, and if there are any it displays them.
        A great candidate for later refactoring! REFACTOR */}

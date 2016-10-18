@@ -1,4 +1,4 @@
-var WeatherAlert = (prop) => (
+let WeatherAlert = (prop) => (
   <div className="alert">
     <h1>Important Weather Alert!</h1>
     <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
