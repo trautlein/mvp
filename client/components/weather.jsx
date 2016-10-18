@@ -1,10 +1,15 @@
-var Weather = (prop) => (
+var Weather = ({weather}) => (
   <div>
-    {/*Checks to see if alerts exists, and if there are any it displays them*/}
-    {prop.state.weather.hasOwnProperty("alerts") ? prop.state.weather.alerts.map((item, index, array) => 
+    {/*Checks to see if alerts exists, and if there are any it displays them.
+       A great candidate for later refactoring! REFACTOR */}
+    {weather.hasOwnProperty("alerts") ? weather.alerts.map((item, index, array) => 
       <WeatherAlert item={item} key={item.time}/>
     ) : null}
-    <CurrentWeather currently={prop.state.weather.currently} />
+    <CurrentWeather currently={weather.currently} />
+    <hr />
+    <HourlyWeather hourly={weather.hourly.data} key={weather.hourly.data.time} />
+    <hr />
+    <pre>Powered By DarkSky.net</pre>
   </div>
 );
 

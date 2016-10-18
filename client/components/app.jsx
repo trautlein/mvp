@@ -24,9 +24,10 @@ class App extends React.Component {
           <h3>Thanks for searching! Want to search again?</h3>
           <Search state={this.state} />
         </div>
+        <hr />
         <div>
           <h2>Your current weather is below!</h2>
-          <Weather state={this.state} />
+          <Weather weather={this.state.weather} />
         </div>
       </div>
     );
