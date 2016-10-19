@@ -26,28 +26,37 @@ class App extends React.Component {
         </div>
         <hr />
         <div>
-          <h2>Your current weather is below!</h2>
           <Weather weather={this.state.weather} />
         </div>
+        <pre className="attribution">Powered By DarkSky.net</pre>
       </div>
     );
   }
 
   updateLocation() {
-    let lat1 = $('.latBox').val();
-    let long1 = $('.longBox').val();
+    let coords = { lat: $('.latBox').val(), long: $('.longBox').val() };
+    let context = this;
 
-    this.setState({
-      location: true,
-      lat: lat1,
-      long: long1,
-      weather: exampleWeatherData
-    }, function afterUpdateLocationState () {
-      $('.latBox').val('');
-      $('.longBox').val('');
-    });
+    $.ajax({
+      url: 'http://127.0.0.1:1337/api',
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify(coords),
+
+      success: function (data) {
+        let parsedData = JSON.parse(data)
+        console.info("Current timezone is:", parsedData.timezone);
+        context.setState({
+          weather: parsedData,
+          lat: $('.latBox').val(),
+          long: $('.longBox').val(),
+          location: true
+        });
+      }, error: function (err) {
+        console.error("Your data didn't go through! So sorry! Error is:\n",err);
+      }
+    })
   }
-
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
