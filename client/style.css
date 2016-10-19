@@ -6,6 +6,17 @@ body {
   color: red;
 }
 
+.icon-div {
+  float: right;
+  font-size: 1px;
+  position: relative;
+  top: -60px;
+}
+
+.canvas-right canvas {
+  float: right;
+}
+
 .alert i {
   float: left;
   font-size: 8em;

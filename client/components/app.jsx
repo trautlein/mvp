@@ -20,10 +20,6 @@ class App extends React.Component {
     }
     return (
       <div>
-        <div>
-          <h3>Thanks for searching! Want to search again?</h3>
-          <Search state={this.state} />
-        </div>
         <hr />
         <div>
           <Weather weather={this.state.weather} />
