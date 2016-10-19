@@ -2,6 +2,19 @@ body {
   background-color: #DFE2DB;
   font-size: 1.5em;
 }
+
+
+.first-page {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    text-align: center;
+}
+
 .alert {
   color: red;
 }
@@ -25,3 +38,4 @@ body {
 
 .attribution {
 }
+

@@ -12,15 +12,16 @@ class App extends React.Component {
 
   render() {
     if (!this.state.location) {
-      return (<div>
+      return (<div className="first-page">
+                <br />
+                <br />
+                <h1>Search for the Weather!</h1>
                 <Search state={this.state} />
-                <h1>Your weather will appear here!</h1>
               </div>
       );
     }
     return (
       <div>
-        <hr />
         <div>
           <Weather weather={this.state.weather} />
         </div>
