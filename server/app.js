@@ -1,7 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const Promise = require('bluebird');
 const DarkSky = require('dark-sky');
-const forecast = new DarkSky('8b8f3aa22900a0803b951d23511a5d2b');
+// const forecast = new DarkSky('8b8f3aa22900a0803b951d23511a5d2b');
+const forecast = new DarkSky(process.env.DARKSKY_API_KEY);
 // Middleware
 const cors = require('cors');
 const morgan = require('morgan');
